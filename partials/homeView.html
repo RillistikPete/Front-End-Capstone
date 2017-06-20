@@ -1,0 +1,103 @@
+
+<div ng-include="'partials/navbar.html'">
+	</div>
+
+
+<!--  MAIN CONTENT ON PAGE - TWO COLUMNS 4 BOXES -->
+
+
+<div class="container">
+
+
+<!-- SIDE NAV -->
+    <!--  <div class="col s3">
+                <ul class="fixed">
+                    <li><button class="btn workHover" href="#!/myWorkouts">My Workouts</button></li>
+                    <br>
+                    <li><button class="btn suggHover" href="#!/suggested">Suggested</button></li>
+                    <br>
+                    <li><button class="btn creaHover" href="#!/addWorkout">Create Workout</button></li>
+                </ul>
+     </div> -->
+<!-- END SIDE NAV -->
+
+
+    <div class="row">
+        <div class="card col s6">
+            <div class="card-content">
+                <a href="#!/myWorkouts"><h5 style="text-align:center;">My Workouts</h5></a>
+            </div>
+            <div style="text-align:center;" class="card-tabs">
+                <img src="https://media.giphy.com/media/GgUPV5VvFytpu/giphy.gif" height="311px" width="390px" alt="billy">
+            </div>
+            <div class="card-content grey lighten-4">
+
+            </div>
+        </div>
+        <div class="card col s6">
+            <div class="card-content">
+                <a href="#!/suggested"><h5 style="text-align:center;">Suggested Workouts</h5></a>
+            </div>
+            <div style="text-align:center;" class="card-tabs">
+                <img src="https://media.giphy.com/media/7xbUcQrTUSJHO/giphy.gif" height="311px" width="390px" alt="workoutguy">
+            </div>
+            <div class="card-content grey lighten-4">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col s6">
+            <div class="card-content">
+                <a href="#!/addWorkout"><h5 style="text-align:center;">Create Workout</h5></a>
+            </div>
+            <div class="card-tabs">
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="test4">Create your own personalized workout and add to My Workouts!</div>
+            </div>
+        </div>
+        <div class="card col s6">
+            <div class="card-content">
+
+
+            <a href="" ng-click="generateQuote()" data-target='modal' modal><h5 style="text-align:center;">Quote of the Day</h5></a>
+
+             </div>
+            <div class="card-tabs">
+            </div>
+            <div class="card-content grey lighten-4">
+                <div style="text-align:center" id="test4">Feeling like a loser today? Click for random inspiration.</div>
+            </div>
+                			<!--MODAL DRAWING FROM API-->
+
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+
+                        <div class="row">
+                            <div class="input-field col s12">
+
+
+                                <p id="random_quote" style="font-size:1.1em; text-align:center;"></p>
+                                <h4 id="random_author" style="text-align:center;"></h4>
+
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <a href="#!/homeView" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="$dismiss()">Close</a>
+
+                        </div>
+                    </div>
+                  </div>
+							<!-- end of MODAL -->
+
+        </div> <!-- END OF CARD FOR QUOTE MODAL -->
+    </div>
+
+
+	</div>
+</div>
+
+</div> <!-- CONTAINER -->

@@ -1,0 +1,73 @@
+
+<div ng-include="'partials/navbar.html'">
+  </div>
+
+<!-- //  Add/Create Workout View
+ -->
+<!--File select option incase someone wants to put their own workout they have saved in-->
+<div class="container">
+
+
+<h4 style="text-align:center;">Create Workout</h4>
+  <p class="pee" style="text-align:center;">Upload an existing file or select day and fill in fields to create workout. Click SAVE to add to "My Workouts" list.</p>
+    <form action="#">
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>File</span>
+                <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+    </form>
+    <!-- ________________________________________________________________ -->
+    <div class="row">
+        <form class="col s12">
+
+                    <select ng-model="workout.Day">
+                        <option value="" disabled selected>Choose Day of Week</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="last_name" ng-model="workout.Muscles" type="text" class="validate">
+                    <label for="last_name">Muscles</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+    <!--      NG-MODEL="newExercise" - SAME AS $scope.newExercise - !!!!!-->
+                 <input id="password" ng-model="workout.Exercises" type="text" class="validate">
+                    <label for="password">Exercises</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    Additional Notes for workout:
+                    <div class="input-field inline">
+                        <input id="notes" ng-model="workout.Notes" type="text" class="validate">
+                        <label for="text" data-error="wrong" data-success="right">Notes</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+              <div style="text-align:center;">
+                  <div class="btn">
+                    <span ng-click="addCreatedWorkout()" href="#!/myWorkouts">Save</span>
+                  </div>
+                  <div class="btn">
+                    <span href="#!/homeView">Cancel</span>
+                  </div>
+              </div>
+</div>
+<!-- CONTAINER -->

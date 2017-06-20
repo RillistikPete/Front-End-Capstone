@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <title>Workout Tracker - Front End Capstone</title>
+   	<link rel="stylesheet" type="text/css" href="css/main.css">
+   		<!--Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--materialize.css-->
+    <link type="text/css" rel="stylesheet" href="lib/node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+</head>
+
+<body ng-app="Protein">
+
+	<h3 style="margin:10px 0 10px 0;text-align:center;background:linear-gradient(#0000FF, #7B68EE)">Workouts</h3>
+
+	
+
+	<div class="container">
+	</div>
+	<div ng-view>
+	</div>
+
+	<div ng-include="'partials/footer.html'"></div>
+
+
+
+
+    <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> -->
+    <script type="text/javascript" src="./app/app.js"></script>
+    <script type="text/javascript" src="app/values/fb-creds.js"></script>
+    <!--Factories-->
+    <script type="text/javascript" src="./app/factories/authFactory.js"></script>
+    <script type="text/javascript" src="./app/factories/dataFactory.js"></script>
+
+
+
+    <script type="text/javascript" src="./app/controllers/authCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/addWrktCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/homeViewCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/myWrktsCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/navCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/suggestedCtrl.js"></script>
+</body>
+
+</html>
