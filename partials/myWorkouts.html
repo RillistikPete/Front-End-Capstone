@@ -21,7 +21,7 @@
         </ul>
     </div>
     <!-- END SIDE NAV -->
-    <div class="container myWorkoutsColor">
+    <div class="container">
         <div class="col s9">
             <h4 style="text-align:center;">My Workouts Schedule</h4>
             <p style="text-align:center;">Click to edit or delete workout from schedule.</p>
@@ -45,11 +45,46 @@
                     </div>
                 </div>
 
+            <!-- EDIT Modal Structure -->
+                <div id="modal-{{key.id}}" class="modal">
+                <!-- Put {{key.id}} here in this format to target the specific workout object instead of the first one only! -->
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <!-- key.Muscles populates with whats in the object already -->
+                            <input id="muscles" ng-model="key.Muscles" type="text" class="validate">
+                            <!-- <label for="last_name">Muscles</label> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--      NG-MODEL="newExercise" - SAME AS $scope.newExercise - !!!!!-->
+                            <input id="exercises" ng-model="key.Exercises" type="text" class="validate">
+                            <label for="password">Exercises</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            Additional Notes for workout:
+                            <div class="input-field inline">
+                                <input id="notes" ng-model="key.Notes" type="text" class="validate">
+                                <label for="text" data-error="wrong" data-success="right">Notes</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!/myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="$dismiss()">Cancel</a>
+                        <a href="#!/myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="editWorkout(key.id, key)">Save</a>
+                        <!--  (key.id) corresponds to workoutId in editWorkout function (datafactory) -->
+                        <!-- (key) corresponds to "edited" which is the edited object -->
+                    </div>
+                </div>
+            </div>
+            </div>
 
-
-                        <!-- COMPLETED MODAL - shows diet! -->
-                        <!-- Modal Structure -->
-                       <!--  <div id='completeModal' class="modal">
+            <!-- COMPLETED MODAL - shows diet! -->
+            <!-- Modal Structure -->
+             <div id='completeModal' class="modal">
                             <div class="modal-content">
                                 <h5>Congratulations!</h5>
                                 <p>You have completed your workout. Here are some diet recommendations:</p>
@@ -59,53 +94,15 @@
                             <div class="modal-footer">
                                 <a href="#!myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
                             </div>
-                        </div> -->
-                        <!-- END OF COMPLETE MODAL -->
-
-
-                        <!-- EDIT Modal Structure -->
-                        <div id="modal-{{key.id}}" class="modal">
-                            <!-- Put {{key.id}} here in this format to target the specific workout object instead of
-                the first one only! -->
-                            <div class="modal-content">
-                                <div class="row">
-                                    <div class="input-field col s6">
-                                        <!-- key.Muscles populates with whats in the object already -->
-                                        <input id="muscles" ng-model="key.Muscles" type="text" class="validate">
-                                        <!-- <label for="last_name">Muscles</label> -->
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <!--      NG-MODEL="newExercise" - SAME AS $scope.newExercise - !!!!!-->
-                                        <input id="exercises" ng-model="key.Exercises" type="text" class="validate">
-                                        <label for="password">Exercises</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col s12">
-                                        Additional Notes for workout:
-                                        <div class="input-field inline">
-                                            <input id="notes" ng-model="key.Notes" type="text" class="validate">
-                                            <label for="text" data-error="wrong" data-success="right">Notes</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#!/myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="$dismiss()">Cancel</a>
-                                    <a href="#!/myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="editWorkout(key.id, key)">Save</a>
-                                    <!--  (key.id) corresponds to workoutId in editWorkout function (datafactory) -->
-                                    <!-- (key) corresponds to "edited" which is the edited object -->
-                                </div>
-                            </div>
-                        </div>
-                        <!--  END EDIT MODAL -->
-                    </div>
                 </div>
-            </div>
-  <!--       </div> -->
-    <!-- </div> -->
-    <div class="parallax-container">
-        <div parallax><img src="images/weightroom.jpg"></div>
-    </div>
+            <!-- END OF COMPLETE MODAL -->
+
+
+            <!--  END EDIT MODAL -->
+        </div>
+    </div> <!-- CONTAINER -->
+ </div><!-- ROW -->
+</div>
+<div class="parallax-container">
+    <div parallax><img src="images/weightroom.jpg"></div>
 </div>
