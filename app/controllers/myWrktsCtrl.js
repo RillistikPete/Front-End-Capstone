@@ -53,13 +53,15 @@ app.controller("myWrktsCtrl", function(dataFactory, $scope, $location, authFacto
             });
     };
 
-    // $scope.completeWorkout = function(workoutId) {
-    //     console.log("workoutId", workoutId);
-    //     dataFactory.completeWorkout(workoutId)
-    //         .then((completed) => {
-    //             open modal
-    //         });
-    // };
+    $scope.completeWorkout = function(workoutId) {
+        console.log("workoutId", workoutId);
+        dataFactory.completeWorkout(workoutId)
+            .then((completed) => {
+            	$scope.getMyWorkouts();
+    		});
+    };
+
+
 
     $(document).ready(function() {
     	$('completeModal').modal();

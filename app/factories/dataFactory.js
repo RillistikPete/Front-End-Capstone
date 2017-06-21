@@ -1,7 +1,7 @@
 
 "use strict";
 
-app.factory("dataFactory", function($q, $http, FBcreds, authFactory, $window) {
+app.factory("dataFactory", function($q, $http, FBcreds, authFactory, $window, $routeParams, $route) {
 
 let addCreatedWorkout = function(workoutObject) {
 	return $q(function(resolve, reject){
@@ -94,18 +94,19 @@ let editWorkout = function(workoutId, edited){
 	});
 };
 
-// let completeWorkout = function (workoutId) {
-// 	console.log("clicked complete Workout");
-// 	return $q(function(resolve, reject){
-// 		$http.delete(`${FBcreds.databaseURL}/Workouts/Created/${workoutId}.json`)
-// 		.then(function(response){
-// 			resolve(response);
-// 		})
-// 		.catch(function(error){
-// 			reject(error);
-// 		});
-// 	});
-// };
+let completeWorkout = function (workoutId) {
+	console.log("clicked complete Workout");
+	return $q(function(resolve, reject){
+		$http.delete(`${FBcreds.databaseURL}/Workouts/Created/${workoutId}.json`)
+		.then(function(response){
+			resolve(response);
+			$route.reload();
+		})
+		.catch(function(error){
+			reject(error);
+		});
+	});
+};
 
 let getSuggestedWorkouts = function () {
 	return $q(function(resolve, reject){
@@ -150,7 +151,7 @@ return {
 	getCreatedWorkouts,
 	deleteWorkout,
 	editWorkout,
-	//completeWorkout
+	completeWorkout
 };
 
 });

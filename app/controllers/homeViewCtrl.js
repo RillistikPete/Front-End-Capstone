@@ -18,6 +18,10 @@ app.controller("homeViewCtrl", function(authFactory, dataFactory, $scope, $locat
 	// 	$scope.generateQuote();
 	// }
 
+	$(document).ready(function(){
+    	$('.collapsible').collapsible();
+  	});
+
     $scope.generateQuote = function() {
     	console.log("generateQuote clicked");
         $.ajax({

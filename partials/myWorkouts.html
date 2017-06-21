@@ -32,10 +32,11 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
             <h3 style="text-align:center;font-family:'Bungee Inline', cursive;">My Workouts Schedule</h3>
             <p style="text-align:center;background:white;font-size:1.3em;">Click to edit or delete workout from schedule.</p>
             <div class="dayofweek" ng-repeat="key in workouts">
-                <div class="section boob" style="background:white;">
+                <div class="section boob z-depth-5" style="background:white;border-radius:15px;">
                     <h5>{{key.Day}}</h5>
                     <p><strong>{{key.Muscles}}</strong></p>
                     <p>{{key.Exercises}}</p>
+                    <p>{{key.Notes}}</p>
                     <!--  <a href="#!/myWorkouts/{{workouts.workoutId}}"> -->
                     <!-- Modal Trigger -->
                     <div class="row">
@@ -45,8 +46,8 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
                         <a href="#!/myWorkouts">
                             <button class="btn btn-responsive" ng-click="deleteWorkout(key.id)">Delete</button>
                         </a>
-                        <a data-target="completeModal" href="#!/myWorkouts">
-                            <button style="float:right;margin-right:20px;" class="btn btn-responsive" onclick="$('completeModal').modal('open');">Complete!</button>
+                        <a href="#!/myWorkouts">
+                            <button style="float:right;margin-right:20px;" class="btn btn-responsive" data-target="completeModal-{{key.id}}" modal>Complete!</button>
                         </a>
                     </div>
                 </div>
@@ -83,31 +84,32 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
                         <a href="#!/myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="editWorkout(key.id, key)">Save</a>
                         <!--  (key.id) corresponds to workoutId in editWorkout function (datafactory) -->
                         <!-- (key) corresponds to "edited" which is the edited object -->
+            <!--  END EDIT MODAL -->
                     </div>
                 </div>
             </div>
-            </div>
-
             <!-- COMPLETED MODAL - shows diet! -->
             <!-- Modal Structure -->
-             <div id='completeModal' class="modal">
+             <div id='completeModal-{{key.id}}' class="modal">
                             <div class="modal-content">
                                 <h5>Congratulations!</h5>
-                                <p>You have completed your workout. Here are some diet recommendations:</p>
-                                <p><a href="http://www.menshealth.com/nutrition/muscle-food/slide/4">Foods for Building Muscle</a></p>
-                                <p><a href="http://www.livestrong.com/article/516856-good-foods-to-eat-when-cutting-weight-for-wrestling/">Foods for Cutting Weight</a></p>
+                                <p>You have completed your <strong>{{key.Day}}</strong> workout. Here are some diet recommendations:</p>
+                                <p><a target="_blank" href="http://www.menshealth.com/nutrition/muscle-food/slide/4">Foods for Building Muscle</a></p>
+                                <p><a target="_blank" href="http://www.livestrong.com/article/516856-good-foods-to-eat-when-cutting-weight-for-wrestling/">Foods for Cutting Weight</a></p>
                             </div>
                             <div class="modal-footer">
                               <a href="#!/myWorkouts">
-                               <button class="btn btn-responsive" ng-click="deleteWorkout(key.id)">Delete</button>
+                               <button class="modal-close btn btn-responsive" ng-click="completeWorkout(key.id)">Delete</button>
                               </a>
                                 <a href="#!myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
                             </div>
                 </div>
             <!-- END OF COMPLETE MODAL -->
 
+            </div>  <!-- ng-repeat workouts (workoutId) -->
 
-            <!--  END EDIT MODAL -->
+
+
         </div>
     </div> <!-- CONTAINER -->
  </div><!-- ROW -->
