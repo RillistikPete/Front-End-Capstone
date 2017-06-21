@@ -1,15 +1,15 @@
 
-  <nav>
+  <nav style="background-color:blue;">
     <div class="nav-wrapper">
-      <a href="#!/homeView" class="brand-logo">Workout</a>
+      <a style="margin-left:100px;" href="#!/homeView" class="brand-logo">Home</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://wger.de/en/exercise/overview/" target="_blank">How To Weightlift (Instructions for any exercise)</a></li>
+      <ul class="right hide-on-med-and-down" style="padding-right:50px;">
+        <li><a href="https://wger.de/en/exercise/overview/" target="_blank">Weightlifting Instructions</a></li>
         <li><a href="#!/myWorkouts">{{userObj.name}}</a></li>
         <li><a href="#!/">Logout</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="https://wger.de/en/exercise/overview/" target="_blank">How To Weightlift (Instructions for any exercise)</a></li>
+        <li><a href="https://wger.de/en/exercise/overview/" target="_blank">Weightlifting Instructions</a></li>
         <li><a href="#!/myWorkouts">{{userObj.name}}</a></li>
         <li><a href="#!/" ng-click="logoutUser()">Logout</a></li>
       </ul>

@@ -4,29 +4,35 @@
     <div parallax><img src="images/weightroom.jpg"></div>
 </div>
 <!-- SIDE NAV -->
-<div class="row">
+<div class="row" style="margin-bottom:0;background-color:#269;
+background-image: linear-gradient(white 2px, transparent 2px),
+linear-gradient(90deg, white 2px, transparent 2px),
+linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
     <div class="col s3">
         <ul class="fixed">
             <li>
-                <button class="btn pulse workHover"><a href="#!/myWorkouts">My Workouts</a></button>
+               <a class='btn waves-effect waves-light pulse' href="#!/myWorkouts">My Workouts</a></button>
             </li>
             <br>
             <li>
-                <button class="btn suggHover"><a href="#!/suggested">Suggested</a></button>
+                <a class='btn waves-effect waves-light' href="#!/suggested">Suggested</a></button>
             </li>
             <br>
             <li>
-                <button class="btn creaHover"><a href="#!/addWorkout">Create Workout</a></button>
+                <a class='btn waves-effect waves-light' href="#!/addWorkout">Create Workout</a></button>
             </li>
         </ul>
     </div>
     <!-- END SIDE NAV -->
     <div class="container">
         <div class="col s9">
-            <h4 style="text-align:center;">My Workouts Schedule</h4>
-            <p style="text-align:center;">Click to edit or delete workout from schedule.</p>
+            <h3 style="text-align:center;font-family:'Bungee Inline', cursive;">My Workouts Schedule</h3>
+            <p style="text-align:center;background:white;font-size:1.3em;">Click to edit or delete workout from schedule.</p>
             <div class="dayofweek" ng-repeat="key in workouts">
-                <div class="section boob">
+                <div class="section boob" style="background:white;">
                     <h5>{{key.Day}}</h5>
                     <p><strong>{{key.Muscles}}</strong></p>
                     <p>{{key.Exercises}}</p>
@@ -39,8 +45,8 @@
                         <a href="#!/myWorkouts">
                             <button class="btn btn-responsive" ng-click="deleteWorkout(key.id)">Delete</button>
                         </a>
-                        <a data-target='completeModal' href="#!/myWorkouts">
-                            <button style="float:right;margin-right:20px;" class="btn btn-responsive" ng-click="">Complete!</button>
+                        <a data-target="completeModal" href="#!/myWorkouts">
+                            <button style="float:right;margin-right:20px;" class="btn btn-responsive" onclick="$('completeModal').modal('open');">Complete!</button>
                         </a>
                     </div>
                 </div>
@@ -92,6 +98,9 @@
                                 <p><a href="http://www.livestrong.com/article/516856-good-foods-to-eat-when-cutting-weight-for-wrestling/">Foods for Cutting Weight</a></p>
                             </div>
                             <div class="modal-footer">
+                              <a href="#!/myWorkouts">
+                               <button class="btn btn-responsive" ng-click="deleteWorkout(key.id)">Delete</button>
+                              </a>
                                 <a href="#!myWorkouts" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
                             </div>
                 </div>

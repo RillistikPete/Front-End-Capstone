@@ -1,7 +1,7 @@
 .dayofweek {
   border: 2px solid black;
   box-shadow: 2px 2px 2px;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 5px 0 5px 0; }
 
 .boob {
@@ -13,5 +13,17 @@
 .myWorkoutsColor {
   background-color: rgba(54, 25, 25, 0.5);
   opacity: 0.8; }
+
+.waves-light {
+  background-color: red; }
+
+nav {
+  background-color: blue; }
+
+.suggHover {
+  color: white; }
+
+.creaHover {
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

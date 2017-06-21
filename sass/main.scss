@@ -2,7 +2,7 @@
 .dayofweek {
 	border: 2px solid black;
 	box-shadow: 2px 2px 2px;
-	border-radius: 10px;
+	border-radius: 15px;
 	margin: 5px 0 5px 0;
 }
 
@@ -19,6 +19,13 @@
 	opacity: 0.8;
 }
 
+.waves-light {
+	background-color: red;
+}
+
+nav {
+	background-color: blue;
+}
 //Side Nav//
 
 
@@ -40,12 +47,11 @@
 // 	color: darkblue;
 // }
 
-// .workHover {
-// 	color: white;
-// }
-// .suggHover {
-// 	color: white;
-// }
-// .creaHover {
-// 	color: white;
-// }
+.workHover {
+}
+.suggHover {
+	color: white;
+}
+.creaHover {
+	color: white;
+}
