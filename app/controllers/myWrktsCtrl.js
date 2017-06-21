@@ -61,6 +61,10 @@ app.controller("myWrktsCtrl", function(dataFactory, $scope, $location, authFacto
     //         });
     // };
 
+    $(document).ready(function() {
+    	$('completeModal').modal();
+	});
+
     $document.ready(function() {
         $('select').material_select();
     });
