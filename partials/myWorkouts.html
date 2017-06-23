@@ -35,7 +35,11 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
                 <div class="section boob z-depth-5" style="background:white;border-radius:15px;">
                     <h5>{{key.Day}}</h5>
                     <p><strong>{{key.Muscles}}</strong></p>
-                    <p>{{key.Exercises}}</p>
+
+                    <!-- This makes a list of all "exercises" in the array, which is made in the controller  -->
+                    <!-- by the '.split' on workouts[workout] -->
+                    <h6><strong>Exercises to Complete</strong></h6>
+                    <ul><li ng-repeat="Exercise in key.Exercises">{{Exercise}}</li></ul>
                     <p>{{key.Notes}}</p>
                     <!--  <a href="#!/myWorkouts/{{workouts.workoutId}}"> -->
                     <!-- Modal Trigger -->
