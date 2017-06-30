@@ -1,14 +1,33 @@
-
-<div class="container container--auth">
-  <div class="col-xs-6">
-    <h4 style="margin-top:40px;">Login with Google</h4>
-    <button ng-click="loginGoogle()" class="btn btn-info">Sign In</button>
-  </div>
-
-
-  <img src="https://media.giphy.com/media/GgUPV5VvFytpu/giphy.gif" width="300px">
+<div class="container">
+	<div class="row">
+    <div class="auth-form col s6">
+        <h4 style="margin-top:40px;">Login with Google</h4>
+        <button ng-click="loginGoogle()" class="btn btn-info">Sign In</button>
+    </div>
+    <div class="col s6">
+        <section class="rite">
+            <h4>Login with Email</h4>
+            <div>
+                Email:
+                <input type="email" autofocus="true">
+            </div>
+            <div>
+                Password:
+                <input type="password">
+            </div>
+            <div>
+                <button ng-click="login()" class="btn btn-info">Login</button>
+                <button ng-click="register()" class="btn btn-default">Register</button>
+            </div>
+        </section>
+    </div>
+    </div>  <!-- row -->
+    <div class="row">
+  		<img class="col s12" src="images/arnold.jpg" width="750px" height="600px">
+  	</div> <!-- row -->
+    <!--
   <img src="images/whatif.jpg" height="250px">
   <img src="https://media.giphy.com/media/7xbUcQrTUSJHO/giphy.gif" width="300px" height="260px">
+ -->
+ </div>
 
-
-</div>

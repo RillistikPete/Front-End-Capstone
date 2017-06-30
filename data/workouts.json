@@ -15,7 +15,7 @@
     {
         "Day": "Wednesday",
         "Muscles": "Shoulders, trapesius, calves",
-        "Exercises": "Shoulder press with dumbells (3 x 10), Military Press (3 x 10), Shoulder raises (heavy with dumbells or barbell, 3 x 8), Upright rows (3 x 10), Calf press (3 x 12), Standing calf-raises (single or double leg, 3 x 10)"
+        "Exercises": "Shoulder press with dumbells (3 x 10), Military Press (3 x 10), Shoulder raises (heavy with dumbells or barbell (3 x 8)), Upright rows (3 x 10), Calf press (3 x 12), Standing calf-raises (single or double leg (3 x 10)"
     },
 
     {
@@ -27,19 +27,19 @@
     {
         "Day": "Friday",
         "Muscles": "Rest",
-        "Exercises": "Regenerate by eating appropriate foods and rehydrate with at least one gallon water. Give muscles needed rest. Consume glutamine, amino acid complex, protein, etc."
+        "Exercises": "Regenerate by eating appropriate foods and rehydrate with at least one gallon water. Give muscles needed rest. Consume glutamine / amino acid complex / protein / etc."
     },
 
     {
         "Day": "Saturday",
         "Muscles": "Chest, biceps, squats",
-        "Exercises": "Close-grip bench press (3 x 10), Decline Chest Press (3 x 10), Barbell curls (3 x 10), Bicep burnout (5 sets of 10 reps, drop 10 lbs each set), Smith machine squats with desired weight (3 x 8), Box jumps (2 x 20)"
+        "Exercises": "Close-grip bench press (3 x 10), Decline Chest Press (3 x 10), Barbell curls (3 x 10), Bicep burnout (5 sets of 10 reps - drop 10 lbs each set), Smith machine squats with desired weight (3 x 8), Box jumps (2 x 20)"
 
     },
 
     {
         "Day": "Sunday",
         "Muscles": "Back, triceps, shoulders, Core-work",
-        "Exercises": "Seated rows (3 x 10), Dumbell Rows (3 x 10), Tricep pull-downs single arm (2 x 12), Laying tricep extensions (3 x 15), Shoulder raises with dumbells (3 x 10 each arm), Shoulder extensions (2 x 10), Bicycle abdominal work (50 - 100 reps / 2 - 5 mins)"
+        "Exercises": "Seated rows (3 x 10), Dumbell Rows (3 x 10), Tricep pull-downs single arm (2 x 12), Lying tricep extensions (3 x 15), Shoulder raises with dumbells (3 x 10 each arm), Shoulder extensions (2 x 10), Bicycle abdominal work (50 - 100 reps / 2 - 5 mins)"
     }]
 }

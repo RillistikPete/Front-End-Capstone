@@ -1,8 +1,8 @@
 <div ng-include="'partials/navbar.html'">
 </div>
-<div class="parallax-container">
+<!-- <div class="parallax-container">
     <div parallax><img src="images/weightroom.jpg"></div>
-</div>
+</div> -->
 <!-- SIDE NAV -->
 <div class="row" style="margin-bottom:0;background-color:#269;
 background-image: linear-gradient(white 2px, transparent 2px),
@@ -38,7 +38,7 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
 
                     <!-- This makes a list of all "exercises" in the array, which is made in the controller  -->
                     <!-- by the '.split' on workouts[workout] -->
-                    <h6><strong>Exercises to Complete</strong></h6>
+                    <h6><strong>Exercises to Complete:</strong></h6>
                     <ul><li ng-repeat="Exercise in key.Exercises">{{Exercise}}</li></ul>
                     <p>{{key.Notes}}</p>
                     <!--  <a href="#!/myWorkouts/{{workouts.workoutId}}"> -->

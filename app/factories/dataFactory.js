@@ -13,7 +13,7 @@ let addCreatedWorkout = function(workoutObject) {
 		// }
 		console.log(workoutObject);
 		workoutObject = JSON.stringify(workoutObject);
-		$http.post(`${FBcreds.databaseURL}/Workouts/Created.json`, workoutObject)
+		$http.post(`${FBcreds.databaseURL}/Created.json`, workoutObject)
 		.then(function(response){
 			resolve(response.data);
 		})
@@ -31,7 +31,7 @@ let getCreatedWorkouts = function() {
 
 	let wrkts = [];
 	return $q(function(resolve, reject){
-		$http.get(`${FBcreds.databaseURL}/Workouts/Created.json`)
+		$http.get(`${FBcreds.databaseURL}/Created.json`)
 		.then(function(wrktObject){
 			console.log("get created workouts data", wrktObject);
 			let allTheWorkouts = wrktObject.data;
@@ -55,7 +55,7 @@ let addSuggestedWorkout = function(object){
 	return $q(function(resolve, reject){
 		let JSONstring = JSON.stringify(object);
 		console.log("jsonstring", JSONstring);
-		$http.post(`${FBcreds.databaseURL}/Workouts/Created.json`, JSONstring)
+		$http.post(`${FBcreds.databaseURL}/Created.json`, JSONstring)
 		.then(function(response){
 			resolve(response.data);
 		})
@@ -68,7 +68,7 @@ let addSuggestedWorkout = function(object){
 let deleteWorkout = function(workoutId){
 	console.log("clicked deleteWorkout");
 	return $q(function(resolve, reject){
-		$http.delete(`${FBcreds.databaseURL}/Workouts/Created/${workoutId}.json`)
+		$http.delete(`${FBcreds.databaseURL}/Created/${workoutId}.json`)
 		.then(function(response){
 			resolve(response);
 		})
@@ -84,7 +84,7 @@ let editWorkout = function(workoutId, edited){
 		console.log("edited", edited);
 		let newObj = JSON.stringify(edited);
 		console.log("newObj", newObj);
-		$http.patch(`${FBcreds.databaseURL}/Workouts/Created/${workoutId}.json`, newObj)
+		$http.patch(`${FBcreds.databaseURL}/Created/${workoutId}.json`, newObj)
 		.then(function(response){
 			resolve(response);
 		})
@@ -97,7 +97,7 @@ let editWorkout = function(workoutId, edited){
 let completeWorkout = function (workoutId) {
 	console.log("clicked complete Workout");
 	return $q(function(resolve, reject){
-		$http.delete(`${FBcreds.databaseURL}/Workouts/Created/${workoutId}.json`)
+		$http.delete(`${FBcreds.databaseURL}/Created/${workoutId}.json`)
 		.then(function(response){
 			resolve(response);
 			$route.reload();
@@ -110,7 +110,7 @@ let completeWorkout = function (workoutId) {
 
 let getSuggestedWorkouts = function () {
 	return $q(function(resolve, reject){
-		$http.get(`${FBcreds.databaseURL}/Workouts/Workouts.json`)
+		$http.get(`${FBcreds.databaseURL}/Workouts.json`)
 		.then( function(data){
 			console.log("data", data);
 			resolve(data.data);
@@ -125,7 +125,7 @@ let getSuggestedWorkouts = function () {
 
 let getMyWorkouts = function() {
 	return $q(function(resolve, reject){
-		$http.get(`${FBcreds.databaseURL}/Workouts/Created.json`)
+		$http.get(`${FBcreds.databaseURL}/Created.json`)
 		.then(function(data){
 			console.log("data", data);
 			resolve(data.data);
