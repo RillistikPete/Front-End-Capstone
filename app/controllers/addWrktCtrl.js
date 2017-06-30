@@ -21,6 +21,8 @@ let user = authFactory.getUser();
 	// 	console.log("workout", workout);
 	// });
 
+
+
 	console.log("$routeParams.workoutid", $routeParams.workoutId);
 
 	$scope.addCreatedWorkout = () => {

@@ -9,29 +9,28 @@ background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
 background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
             <div class="col s3">
                 <ul class="fixed">
-                    <li><a class='btn waves-effect waves-light' href="#!/myWorkouts">My Workouts</a></li>
+                    <li><a style="background-color:#0000CD;" class='btn waves-effect waves-light' href="#!/myWorkouts">My Workouts</a></li>
                     <br>
-                    <li><a class='btn waves-effect waves-light pulse' href="#!/suggested">Suggested</a></li>
+                    <li><a style="background-color:#0000CD;" class='btn waves-effect waves-light pulse' href="#!/suggested">Suggested</a></li>
                     <br>
-                    <li><a class='btn waves-effect waves-light' href="#!/addWorkout">Create Workout</a></li>
+                    <li><a style="background-color:#0000CD;" class='btn waves-effect waves-light' href="#!/addWorkout">Create Workout</a></li>
                 </ul>
             </div>
         <!-- END SIDE NAV -->
 <div class="container">
 <div class="col s9">
     <h4 style="text-align:center;margin-right:50px;font-family:'Bungee Inline', cursive;">Suggested Workouts</h4>
-    <p style="text-align:center;background:white;font-size:1.3em;">Click to add a workout to your "My Workouts" schedule.</p>
+    <p style="text-align:center;background:lightgray;font-size:1.3em;">Click to add a workout to your "My Workouts" schedule.</p>
     <div class="dayofweek" ng-repeat="key in workouts">
         <div class="section boob" style="background:lightgray;border-radius:15px;">
             <h5>{{key.Day}}</h5>
             <p><strong>{{key.Muscles}}</strong></p>
             <h6><strong>Exercises to Complete:</strong></h6>
             <p>{{key.Exercises}}</p>
-            <!-- June 30 trying to fix this below -->
-            <ul><li ng-repeat="Exercise in key.Exercises">{{Exercise}}</li></ul>
+<!--             <ul><li ng-repeat="Exercise in key.Exercises">{{Exercise}}</li></ul>
+ -->
 
-
-            <button class="btn btn-responsive" ng-click="addSuggestedWorkout(key)">Save</button>
+            <button style="background-color:#0000CD;" class="btn btn-responsive" ng-click="addSuggestedWorkout(key)">Save</button>
         </div>
     </div>
     </div>
