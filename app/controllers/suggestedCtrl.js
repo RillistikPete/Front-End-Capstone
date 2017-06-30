@@ -27,18 +27,19 @@ app.controller("suggestedCtrl", function (dataFactory, $scope, $location, authFa
 
 	$scope.getSuggestedWorkouts = function(){
 		let wrkts = [];
-		dataFactory.getSuggestedWorkouts()
+		dataFactory.getSuggestedWorkouts($routeParams.workoutId)
 		.then((workouts) => {
 
 
-			Object.keys(workouts).forEach(function(workout) {
-			// 	console.log("the workouts", workouts);
-			// 	workouts[workout].id = workout;
-			console.log("our workouts", workouts);
-		 	workout = workout.split(',');
-			// 	console.log("workout[workout]", workouts[workout]);
+			Object.keys(workouts).forEach((workout) => {
 
-   			   wrkts.push(workout);
+                    workouts[workout].id = workout;
+                 // workouts is the index of all of them, workout singular is an individual one
+                    workouts[workout].Exercises = workouts[workout].Exercises.split(',');
+                    console.log("workouts[workout]", workouts[workout]);
+
+
+                    wrkts.push(workouts[workout]);
 
 			});
 

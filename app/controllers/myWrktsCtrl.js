@@ -22,16 +22,16 @@ app.controller("myWrktsCtrl", function(dataFactory, $scope, $location, authFacto
             .then((workouts) => {
                 //this takes the long key of each object and assigns it to an id property of the object
 
-                Object.keys(workouts).forEach((workout) => {
+                // Object.keys(workouts).forEach((workout) => {
 
-                    workouts[workout].id = workout;
-                 // workouts is the index of all of them, workout singular is an individual one
-                    workouts[workout].Exercises = workouts[workout].Exercises.split(',');
-                    console.log("workout", workouts[workout]);
+                //     workouts[workout].id = workout;
+                //  // workouts is the index of all of them, workout singular is an individual one
+                //     workouts[workout].Exercises = workouts[workout].Exercises.split(',');
+                //     console.log("workouts[workout]", workouts[workout]);
 
 
-                    wrkts.push(workouts[workout]);
-                });
+                //     wrkts.push(workouts[workout]);
+                // });
                 $scope.workouts = wrkts;
                 console.log(workouts);
             });
