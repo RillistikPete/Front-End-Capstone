@@ -2,7 +2,7 @@
 
 //get and show all pins belonging to user from FB. remove unwanted pins
 
-app.controller("suggestedCtrl", function (dataFactory, $scope, $location, authFactory) {
+app.controller("suggestedCtrl", function (dataFactory, $scope, $location, authFactory, $routeParams) {
 	console.log("suggested ctrl");
 
 	$scope.addSuggestedWorkout = (saved) => {
@@ -26,10 +26,23 @@ app.controller("suggestedCtrl", function (dataFactory, $scope, $location, authFa
 	};
 
 	$scope.getSuggestedWorkouts = function(){
+		let wrkts = [];
 		dataFactory.getSuggestedWorkouts()
 		.then((workouts) => {
+
+
+			Object.keys(workouts).forEach(function(workout) {
+			// 	console.log("the workouts", workouts);
+			// 	workouts[workout].id = workout;
+			console.log("our workouts", workouts);
+		 	workout = workout.split(',');
+			// 	console.log("workout[workout]", workouts[workout]);
+
+   			   wrkts.push(workout);
+
+			});
+
 			$scope.workouts = workouts;
-			console.log(workouts);
 		});
 	 };
 
