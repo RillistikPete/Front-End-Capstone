@@ -31,17 +31,17 @@ app.controller("suggestedCtrl", function (dataFactory, $scope, $location, authFa
 		.then((workouts) => {
 
 
-			Object.keys(workouts).forEach((workout) => {
+			// Object.keys(workouts).forEach((workout) => {
 
-                    workouts[workout].id = workout;
-                 // workouts is the index of all of them, workout singular is an individual one
-                    workouts[workout].Exercises = workouts[workout].Exercises.split(',');
-                    console.log("workouts[workout]", workouts[workout]);
+   //                  workouts[workout].id = workout;
+   //               // workouts is the index of all of them, workout singular is an individual one
+   //                  workouts[workout].Exercises = workouts[workout].Exercises.split(',');
+   //                  console.log("workouts[workout]", workouts[workout]);
 
 
-                    wrkts.push(workouts[workout]);
+   //                  wrkts.push(workouts[workout]);
 
-			});
+			// });
 
 			$scope.workouts = workouts;
 		});

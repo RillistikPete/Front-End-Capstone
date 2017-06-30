@@ -14,15 +14,15 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
     <div class="col s3">
         <ul class="fixed">
             <li>
-               <a class='btn waves-effect waves-light pulse' href="#!/myWorkouts">My Workouts</a></button>
+               <a style="background-color:#0000CD;" class='btn waves-effect waves-light pulse' href="#!/myWorkouts">My Workouts</a>
             </li>
             <br>
             <li>
-                <a class='btn waves-effect waves-light' href="#!/suggested">Suggested</a></button>
+                <a style="background-color:#0000CD;" class='btn waves-effect waves-light' href="#!/suggested">Suggested</a>
             </li>
             <br>
             <li>
-                <a class='btn waves-effect waves-light' href="#!/addWorkout">Create Workout</a></button>
+                <a style="background-color:#0000CD;" class='btn waves-effect waves-light' href="#!/addWorkout">Create Workout</a>
             </li>
         </ul>
     </div>
@@ -45,13 +45,13 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
                     <!-- Modal Trigger -->
                     <div class="row">
                         <div class="col">
-                            <a class='btn waves-effect waves-light' data-target='modal-{{key.id}}' modal>Edit</a>
+                            <a style="background-color:#0000CD;" class='btn waves-effect waves-light' data-target='modal-{{key.id}}' modal>Edit</a>
                         </div>
                         <a href="#!/myWorkouts">
-                            <button class="btn btn-responsive" ng-click="deleteWorkout(key.id)">Delete</button>
+                            <button style="background-color:#0000CD;" class="btn btn-responsive" ng-click="deleteWorkout(key.id)">Delete</button>
                         </a>
                         <a href="#!/myWorkouts">
-                            <button style="float:right;margin-right:20px;" class="btn btn-responsive" data-target="completeModal-{{key.id}}" modal>Complete!</button>
+                            <button style="float:right;margin-right:20px;background-color:#0000CD;" class="btn btn-responsive" data-target="completeModal-{{key.id}}" modal>Complete!</button>
                         </a>
                     </div>
                 </div>
@@ -63,6 +63,7 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
                     <div class="row">
                         <div class="input-field col s6">
                             <!-- key.Muscles populates with whats in the object already -->
+                            <p><strong>Muscles</strong></p>
                             <input id="muscles" ng-model="key.Muscles" type="text" class="validate">
                             <!-- <label for="last_name">Muscles</label> -->
                         </div>
@@ -70,8 +71,9 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
                     <div class="row">
                         <div class="input-field col s12">
                             <!--      NG-MODEL="newExercise" - SAME AS $scope.newExercise - !!!!!-->
+                            <p><strong>Exercises</strong></p>
                             <input id="exercises" ng-model="key.Exercises" type="text" class="validate">
-                            <label for="password">Exercises</label>
+                            <!-- <label for="password">Exercises</label> -->
                         </div>
                     </div>
                     <div class="row">

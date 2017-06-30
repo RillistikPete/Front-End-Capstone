@@ -12,7 +12,7 @@
   <p class="pee" style="text-align:center;">Upload an existing file or select day and fill in fields to create workout. Click SAVE to add to "My Workouts" list.</p>
     <form action="#">
         <div class="file-field input-field">
-            <div class="btn">
+            <div class="btn" style="background-color:#0000CD;">
                 <span>File</span>
                 <input type="file">
             </div>
@@ -27,7 +27,7 @@
 
                     <select ng-model="workout.Day">
                         <option value="" disabled selected>Choose Day of Week</option>
-                        <option value="Monday">Monday</option>
+                        <option style="color:#0000CD;" value="Monday">Monday</option>
                         <option value="Tuesday">Tuesday</option>
                         <option value="Wednesday">Wednesday</option>
                         <option value="Thursday">Thursday</option>
@@ -61,11 +61,11 @@
             </div>
         </form>
     </div>
-              <div style="text-align:center;">
-                  <div class="btn">
+              <div style="text-align:center;margin-bottom:20px;">
+                  <div class="btn" style="background-color:#0000CD;">
                     <span ng-click="addCreatedWorkout()" href="#!/myWorkouts">Save</span>
                   </div>
-                  <div class="btn">
+                  <div class="btn" style="background-color:#0000CD;">
                     <span href="#!/homeView">Cancel</span>
                   </div>
               </div>
