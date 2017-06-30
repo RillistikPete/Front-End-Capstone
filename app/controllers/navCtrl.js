@@ -30,7 +30,7 @@ app.controller("navCtrl", function($scope, authFactory, dataFactory, $location) 
         }
     });
 
-    $('.dropdown-button').dropdown({
+    $('.dropdown').dropdown({
       inDuration: 300,
       outDuration: 225,
       constrainWidth: false, // Does not change width of dropdown to that of the activator
