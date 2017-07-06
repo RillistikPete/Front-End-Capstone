@@ -23,14 +23,14 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px">
     <p style="text-align:center;background:lightgray;font-size:1.3em;">Click to add a workout to your "My Workouts" schedule.</p>
     <div class="dayofweek" ng-repeat="key in workouts">
         <div class="section boob" style="background:lightgray;border-radius:15px;">
-            <h5>{{key.Day}}</h5>
-            <p><strong>{{key.Muscles}}</strong></p>
+            <h5 style="text-align:center;"><strong>{{key.Day}}</strong></h5>
+            <p style="text-align:center;"><strong>{{key.Muscles}}</strong></p>
             <h6><strong>Exercises to Complete:</strong></h6>
             <p>{{key.Exercises}}</p>
 <!--             <ul><li ng-repeat="Exercise in key.Exercises">{{Exercise}}</li></ul>
  -->
 
-            <button style="background-color:#0000CD;" class="btn btn-responsive" ng-click="addSuggestedWorkout(key)">Save</button>
+            <button style="background-color:#0000CD;" class="btn btn-responsive" ng-click="addSuggestedWorkout(key)">Add to My Workouts</button>
         </div>
     </div>
     </div>
