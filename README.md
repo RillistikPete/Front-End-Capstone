@@ -16,7 +16,13 @@ familiar with working out, feel free to create your own by clicking Create Worko
 4. Materialize
 5. Angular-materialize
 
-#### You can navigate to Lib folder in project files and run NPM Install
+#### To run my project, you can clone or download it. ####
+#### In Terminal: Navigate to where the project will be on your machine and run: ####
+`git clone 'copied clone link here'`
+#### Once this is complete you can navigate to Lib folder in project files and run: ####
+`npm install`
+
+
 
 > This will install all of the required dependencies in the package.json file.
 
@@ -27,7 +33,9 @@ familiar with working out, feel free to create your own by clicking Create Worko
 Your Firebase tree structure should look like this:
 
 FECapstone
+
     + Workouts
+
     + Created
 
 _Note you will not see the "Created" branch of data until you add your own created workout or save a suggested workout to "My Workouts"_
