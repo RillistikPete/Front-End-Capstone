@@ -8,20 +8,12 @@ familiar with working out, feel free to create your own by clicking Create Worko
 
 <hr>
 
-## Prerequisites for Running Workout Tracker on Your Machine
-
-1. Angular
-2. JQuery
-3. Angular-route
-4. Materialize
-5. Angular-materialize
-
 #### To run my project, you can clone or download it. ####
 #### To Clone: Open Terminal and enter in command line: ####
 `git clone copied-clone-link WorkoutTracker`
-##### This will create a clone of the project in a folder named WorkoutTracker.#####
+##### This will create a clone of the project in a folder named WorkoutTracker.
 
-#### Once this is complete you can navigate into WorkoutTracker/Lib folder in project files and run: ####
+#### Once this is complete you can navigate into the WorkoutTracker/Lib folder of project files in terminal and run: ####
 `npm install`
 
 
