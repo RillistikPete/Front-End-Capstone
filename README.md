@@ -17,26 +17,28 @@ familiar with working out, feel free to create your own by clicking Create Worko
 5. Angular-materialize
 
 #### To run my project, you can clone or download it. ####
-#### In Terminal: Navigate to where the project will be on your machine and run: ####
-`git clone 'copied clone link here'`
-#### Once this is complete you can navigate to Lib folder in project files and run: ####
+#### To Clone: Open Terminal and enter in command line: ####
+`git clone copied-clone-link WorkoutTracker`
+##### This will create a clone of the project in a folder named WorkoutTracker.#####
+
+#### Once this is complete you can navigate into WorkoutTracker/Lib folder in project files and run: ####
 `npm install`
 
 
 
-> This will install all of the required dependencies in the package.json file.
+> This will install all of the required dependencies.
 
 #### You must create a new project in Firebase
 
-> Create a project where you will upload the JSON file used for the Suggested Workouts for Workout Tracker.  This file is located in the _data_ folder in the project files.  Upload this JSON by clicking _Import JSON_ on the _database_section of Firebase project.
+> Create a project where you will upload the JSON file used for the Suggested Workouts for Workout Tracker.  This file is located in the _data_ folder in the project files.  Upload this JSON by clicking _Import JSON_ on the database section of Firebase project.
 
 Your Firebase tree structure should look like this:
 
-FECapstone
+    FECapstone
 
-    + Workouts
+        + Workouts
 
-    + Created
+        + Created
 
 _Note you will not see the "Created" branch of data until you add your own created workout or save a suggested workout to "My Workouts"_
 
@@ -49,13 +51,32 @@ Application will be fully functional once logged in.  Add, edit, delete, or crea
 
 ## Built With
 
-Angular JS
+Angular 1
+
 Angular Route
+
 Angular Materialize
+
 Materialize
+
+JavaScript
+
+JQuery
+
+HTML
+
+CSS
+
+Grunt
+
+NPM
+
+Sass
+
+
 
 ##### Author
 
-Peter Forrest
+Gavin Forrest
 
 
